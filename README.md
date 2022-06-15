@@ -10,5 +10,12 @@ cv2.destroyAllWindows()<br><br>
 
 ![image](https://user-images.githubusercontent.com/97940332/173813972-9a441bd0-13f9-4d8f-8c9a-c8508d154410.png)
 
-2.
+**2.
+#display the image using matplotlib**<br>
+import matplotlib.image as mping<br>
+import matplotlib.pyplot as plt<br>
+img=mping.imread('butterfly1.jpg')<br>
+plt.imshow(img)<br>
+
+![image](https://user-images.githubusercontent.com/97940332/173815217-a4c1675a-d490-480a-839d-f93ffde1142d.png)
 
