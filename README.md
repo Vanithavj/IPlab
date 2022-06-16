@@ -80,6 +80,54 @@ image.close()<br><br>
 ![image](https://user-images.githubusercontent.com/97940332/173818118-79f81917-dd36-4f75-a8be-662ad6721023.png)
 
 
+16/06/2022
+http://localhost:8929/notebooks/vanitha%20IP%20lab/exercise166.ipynb<br>
+
+
+**8.#convert the original image to gray scale & then to binary**<br>
+import cv2<br>
+
+#read the image file<br>
+img=cv2.imread('butterfly1.jpg')<br>
+cv2.imshow("RGB",img)<br>
+cv2.waitKey(0)<br>
+
+
+#Gray scale<br>
+img=cv2.imread('butterfly1.jpg',0)<br>
+cv2.imshow("Gray",img)<br>
+cv2.waitKey(0)<br>
+
+
+#Binary image<br>
+ret,bw_img=cv2.threshold(img, 127, 255, cv2.THRESH_BINARY)<br>
+cv2.imshow("Binary",bw_img)<br>
+cv2.waitKey(0)<br>
+cv2.destroyAllWindows()<br>
+
+![image](https://user-images.githubusercontent.com/97940332/174043202-3b50531e-bb8f-4c89-a203-17453be3b8f9.png)
+
+**9.#Resize the original image**<br>
+import cv2<br>
+img=cv2.imread('plant1.jpg')<br>
+print('original image length width',img.shape)<br>
+cv2.imshow('original image',img)<br>
+#cv2.waitKey(0)<br>
+
+#to show the resized image<br>
+imgresize=cv2.resize(img,(170,180))<br>
+cv2.imshow('Resized image',imgresize)<br>
+print('Resized image length width',imgresize.shape)<br>
+cv2.waitKey(0)<br>
+
+![image](https://user-images.githubusercontent.com/97940332/174043997-093ff2a8-4ea9-4210-a47f-7dd49c755091.png)
+
+
+
+
+
+
+
 
 
 
