@@ -124,6 +124,69 @@ cv2.waitKey(0)<br>
 
 
 
+**22/06/22**<br>
+http://localhost:8890/notebooks/vanitha%20IP%20lab/exercise226.ipynb# <br>
+
+**10.Develop a program to read image using URL**<br>
+from skimage import io<br>
+import matplotlib.pyplot as plt <br>
+url='https://media.istockphoto.com/photos/in-the-hands-of-trees-growing-seedlings-bokeh-green-background-female-picture-id1181366400?k=20&m=1181366400&s=612x612&w=0&h=p-iaAHKhxsF6Wqrs7QjbwjOYAFBrJYhxlLLXEX1wsGs='<br>
+image=io.imread(url)<br>
+plt.imshow(image)<br>
+plt.show()<br><br><br>
+
+![image](https://user-images.githubusercontent.com/97940332/175017946-6440c0f0-09e6-4ee0-8bb2-36961720b573.png)
+
+**11.#program to mask and blur the image**<br>
+
+![image](https://user-images.githubusercontent.com/97940332/175018143-c290e32b-c261-461f-ac5d-b10b0767662d.png)
+![image](https://user-images.githubusercontent.com/97940332/175018290-a7533032-55a5-4e03-8240-2008d25388c8.png)
+![image](https://user-images.githubusercontent.com/97940332/175018339-c57c5735-8e0d-4c7f-a021-82792489e390.png)
+![image](https://user-images.githubusercontent.com/97940332/175018406-4fee40ff-a379-4742-af3d-9d15c34317c9.png)
+![image](https://user-images.githubusercontent.com/97940332/175018458-8f832137-9ef7-4da8-bdd3-6ba92a3012f2.png)
+
+**12.#Program to perform the arithmatic operations on image**<br>
+import cv2<br>
+import matplotlib.image as mping<br>
+import matplotlib.pyplot as plt<br>
+
+#Reading image files<br>
+img1=cv2.imread('butterfly1.jpg')<br>
+img2=cv2.imread('butterfly1.jpg')<br>
+
+#Applying NumPy addition on images<br>
+fimg1 = img1 + img2<br>
+plt.imshow(fimg1)<br>
+plt.show()<br>
+#Saving the output image<br>
+cv2.imwrite('output.jpg',fimg1)<br>
+fimg2 = img1 - img2<br>
+plt.imshow(fimg2)<br>
+plt.show()<br>
+#Saving the output image<br>
+cv2.imwrite('output.jpg',fimg2)<br>
+fimg3 = img1 * img2<br>
+plt.imshow(fimg3)<br>
+plt.show()<br>
+#Saving the  output image<br>
+cv2.imwrite('output.jpg',fimg3)<br>
+fimg4 = img1 / img2<br>
+plt.imshow(fimg4)<br>
+plt.show()<br>
+#Saving the output image<br>
+cv2.imwrite('output.jpg',fimg4)<br>
+
+
+![image](https://user-images.githubusercontent.com/97940332/175018783-c32b3b92-6c5f-4dfe-a3ad-a371dc04a2be.png)
+![image](https://user-images.githubusercontent.com/97940332/175018909-4ebcae92-db4d-41a7-a804-a3b0a1146007.png)
+![image](https://user-images.githubusercontent.com/97940332/175018952-37688fec-49b5-4232-9b86-c2950165e3fb.png)
+
+
+
+
+
+
+
 
 
 
