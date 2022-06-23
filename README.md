@@ -8,7 +8,8 @@ cv2.imshow('flower1',img)<br>
 cv2.waitKey(0)<br>
 cv2.destroyAllWindows()<br><br>
 
-![image](https://user-images.githubusercontent.com/97940332/173813972-9a441bd0-13f9-4d8f-8c9a-c8508d154410.png)
+![image](https://user-images.githubusercontent.com/97940332/173813972-9a441bd0-13f9-4d8f-8c9a-c8508d154410.png)<br>
+***************************************************************************************************************************
 
 **2.
 #display the image using matplotlib**<br>
@@ -17,7 +18,8 @@ import matplotlib.pyplot as plt<br>
 img=mping.imread('butterfly1.jpg')<br>
 plt.imshow(img)<br>
 
-![image](https://user-images.githubusercontent.com/97940332/173815217-a4c1675a-d490-480a-839d-f93ffde1142d.png)
+![image](https://user-images.githubusercontent.com/97940332/173815217-a4c1675a-d490-480a-839d-f93ffde1142d.png)<br>
+*************************************************************************************************************
 
 **3.#linear transformation rotation**<br>
 import cv2<br>
@@ -28,7 +30,8 @@ img.show()<br>
 cv2.waitKey(0)<br>
 cv2.destroyAllWindows()<br><br><br>
 
-![image](https://user-images.githubusercontent.com/97940332/173816085-bad9dd80-0037-4980-a675-103b066a666b.png)
+![image](https://user-images.githubusercontent.com/97940332/173816085-bad9dd80-0037-4980-a675-103b066a666b.png)<br>
+******************************************************************************************************
 
 **4.#convert color string to RGB color values**<br>
 from PIL import ImageColor<br>
