@@ -177,9 +177,7 @@ plt.show()<br>
 cv2.imwrite('output.jpg',fimg4)<br>
 
 
-![image](https://user-images.githubusercontent.com/97940332/175018783-c32b3b92-6c5f-4dfe-a3ad-a371dc04a2be.png)
-![image](https://user-images.githubusercontent.com/97940332/175018909-4ebcae92-db4d-41a7-a804-a3b0a1146007.png)
-![image](https://user-images.githubusercontent.com/97940332/175018952-37688fec-49b5-4232-9b86-c2950165e3fb.png)
+![image](https://user-images.githubusercontent.com/97940332/175278590-84c6a460-eb7f-471d-9a5d-616ec6230e87.png)
 
 23/06/22<br>
 
