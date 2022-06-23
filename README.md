@@ -184,7 +184,8 @@ cv2.imwrite('output.jpg',fimg4)<br>
 23/06/22
 
 
-13.![image](https://user-images.githubusercontent.com/97940332/175260727-36dd7cd3-01a9-4d7d-a6fc-bedc6dcc5264.png)
+13.Develop a program to change the image to different color spaces
+![image](https://user-images.githubusercontent.com/97940332/175260727-36dd7cd3-01a9-4d7d-a6fc-bedc6dcc5264.png)
 14.![image](https://user-images.githubusercontent.com/97940332/175264286-4e861f0f-e05c-4903-b599-bc7369f0d9f4.png)
 
 
