@@ -181,6 +181,12 @@ cv2.imwrite('output.jpg',fimg4)<br>
 ![image](https://user-images.githubusercontent.com/97940332/175018909-4ebcae92-db4d-41a7-a804-a3b0a1146007.png)
 ![image](https://user-images.githubusercontent.com/97940332/175018952-37688fec-49b5-4232-9b86-c2950165e3fb.png)
 
+23/06/22
+
+
+13.![image](https://user-images.githubusercontent.com/97940332/175260727-36dd7cd3-01a9-4d7d-a6fc-bedc6dcc5264.png)
+
+
 
 
 
