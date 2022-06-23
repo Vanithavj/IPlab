@@ -42,14 +42,16 @@ print(img2)<br>
 img3=ImageColor.getrgb("pink")<br>
 print(img3)<br><br><br>
 
-![image](https://user-images.githubusercontent.com/97940332/173816399-e79671f8-293a-477a-a98f-5b5d5d1af535.png)
+![image](https://user-images.githubusercontent.com/97940332/173816399-e79671f8-293a-477a-a98f-5b5d5d1af535.png)<br>
+****************************************************************************************************
 
 **5.#create image using colors**<br>
 from PIL import Image<br>
 img=Image.new('RGB',(200,400),(255,0,255))<br>
 img.show()<br><br>
 
-![image](https://user-images.githubusercontent.com/97940332/173817317-bb78bbba-3ab2-4682-bd1a-d05e6a16ecbd.png)
+![image](https://user-images.githubusercontent.com/97940332/173817317-bb78bbba-3ab2-4682-bd1a-d05e6a16ecbd.png)<br>
+****************************************************************************************************************
 
 **6.#visualize a image using various color spaces**<br>
 import cv2<br>
@@ -66,7 +68,8 @@ plt.imshow(img)<br>
 plt.show()
 <br><br>
 ![image](https://user-images.githubusercontent.com/97940332/173817765-87661f38-ff87-4de2-81e5-1bef4b03df50.png)
-![image](https://user-images.githubusercontent.com/97940332/173817844-72cdb6b9-5082-4ae8-b200-bdc52bbd8ad3.png)
+![image](https://user-images.githubusercontent.com/97940332/173817844-72cdb6b9-5082-4ae8-b200-bdc52bbd8ad3.png)<br>
+*****************************************************************************************************************
 
 **
 7.#display the image attributes**<br>
@@ -80,7 +83,8 @@ print("Width:",image.width)<br>
 print("Height:",image.height)<br>
 image.close()<br><br>
 
-![image](https://user-images.githubusercontent.com/97940332/173818118-79f81917-dd36-4f75-a8be-662ad6721023.png)
+![image](https://user-images.githubusercontent.com/97940332/173818118-79f81917-dd36-4f75-a8be-662ad6721023.png)<br>
+******************************************************************************************************************
 
 
 16/06/2022
@@ -129,6 +133,7 @@ cv2.waitKey(0)<br>
 
 **22/06/22**<br>
 http://localhost:8890/notebooks/vanitha%20IP%20lab/exercise226.ipynb# <br>
+http://localhost:8889/notebooks/vanitha%20IP%20lab/exercise226.ipynb<br>
 
 **10.Develop a program to read image using URL**<br>
 from skimage import io<br>
