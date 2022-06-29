@@ -279,6 +279,12 @@ sharpness=3.0<br>
 image_sharpened=enh_sha.enhance(sharpness)<br>
 image_sharpened.show()<br><br>
 <br>
+![image](https://user-images.githubusercontent.com/97940332/176427584-e5b27861-a506-4819-b617-61d592a3d7cc.png)
+![image](https://user-images.githubusercontent.com/97940332/176427612-2312d11e-1e5a-4463-9ac9-2f013c0c1f44.png)
+![image](https://user-images.githubusercontent.com/97940332/176427629-9ce95111-5229-463c-a99a-c247454c0945.png)
+![image](https://user-images.githubusercontent.com/97940332/176427668-e9b41f18-ca57-4e88-82ea-747be04ce28b.png)
+![image](https://user-images.githubusercontent.com/97940332/176427725-1addd5dd-b136-4db6-a84d-fd944dbbd708.png)
+
 
 **18.#Morphological operations**
 
