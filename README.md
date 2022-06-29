@@ -199,6 +199,35 @@ http://localhost:8889/notebooks/vanitha%20IP%20lab/Untitled3.ipynb?kernel_name=p
 14.![image](https://user-images.githubusercontent.com/97940332/175264286-4e861f0f-e05c-4903-b599-bc7369f0d9f4.png)
 
 
+29/06/22<br>
+
+15.//Bitwise operations<br>
+
+import cv2
+import matplotlib.pyplot as plt
+image1=cv2.imread('butterfly2.jpg',1)
+image2=cv2.imread('butterfly2.jpg')
+ax=plt.subplots(figsize=(15,10))
+bitwiseAnd=cv2.bitwise_and(image1,image2)
+bitwiseOr=cv2.bitwise_or(image1,image2)
+bitwiseXor=cv2.bitwise_xor(image1,image2)
+bitwiseNot_img1=cv2.bitwise_not(image1)
+bitwiseNot_img2=cv2.bitwise_not(image2)
+plt.subplot(151)
+plt.imshow(bitwiseAnd)
+plt.subplot(152)
+plt.imshow(bitwiseOr)
+plt.subplot(153)
+plt.imshow(bitwiseXor)
+plt.subplot(154)
+plt.imshow(bitwiseNot_img1)
+plt.subplot(155)
+plt.imshow(bitwiseNot_img2)
+cv2.waitKey(0)
+
+
+
+
 
 
 
