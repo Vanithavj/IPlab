@@ -201,7 +201,7 @@ http://localhost:8889/notebooks/vanitha%20IP%20lab/Untitled3.ipynb?kernel_name=p
 
 29/06/22<br>
 
-15.//Bitwise operations<br>
+**15.//Bitwise operations<br>**
 
 import cv2<br>
 import matplotlib.pyplot as plt<br>
@@ -228,26 +228,87 @@ cv2.waitKey(0)<br><br><br>
 ![image](https://user-images.githubusercontent.com/97940332/176411024-7f291241-c1ba-4585-854d-98d3af6247d5.png)
 
 
-16.
-#importing libraries
-import cv2
-import numpy as np
-image=cv2.imread('flower1.jpg')
-cv2.imshow('Original image',image)
-cv2.waitKey(0)
-#Gaussian Blur
-Gaussian=cv2.GaussianBlur(image,(7,7),0)
-cv2.imshow('Gaussian Blurring',Gaussian)
-cv2.waitKey(0)
-#Median Blur
-median= cv2.medianBlur(image,5)
-cv2.imshow('Median Blurring',median)
-cv2.waitKey(0)
-#Bilateral Blur
-bilateral=cv2.bilateralFilter(image,9,75,75)
-cv2.imshow('Bilateral Blurring',bilateral)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+**16.Blurring**
+
+#importing libraries<br><br>
+import cv2plt.imshow()<br>
+import numpy as np<br>
+image=cv2.imread('flower1.jpg')<br>
+cv2.imshow('Original image',image)<br>
+cv2.waitKey(0)<br><br>
+#Gaussian Blur<br>
+Gaussian=cv2.GaussianBlur(image,(7,7),0)<br>
+cv2.imshow('Gaussian Blurring',Gaussian)<br>
+cv2.waitKey(0)<br>
+#Median Blur<br><br>
+median= cv2.medianBlur(image,5)<br>
+cv2.imshow('Median Blurring',median)<br>
+cv2.waitKey(0)<br>
+#Bilateral Blur<br><br>
+bilateral=cv2.bilateralFilter(image,9,75,75)<br>
+cv2.imshow('Bilateral Blurring',bilateral)<br>
+cv2.waitKey(0)<br>
+cv2.destroyAllWindows()<br>
+<br>
+![image](https://user-images.githubusercontent.com/97940332/176425512-e02ce5cf-77ca-4d3b-af78-df615054a6c5.png)
+![image](https://user-images.githubusercontent.com/97940332/176425591-64e12905-730c-4890-ac1c-a69a6a14eb9a.png)
+![image](https://user-images.githubusercontent.com/97940332/176425678-f3ad05f6-9f00-48dd-8020-254e41582510.png)
+![image](https://user-images.githubusercontent.com/97940332/176425752-7752ecdf-1906-4a81-832a-7e754fc43c7d.png)
+
+
+**17.#Image Enhancement**<br><br>
+from PIL import Image<br>
+from PIL import ImageEnhance<br>
+image=Image.open('butterfly2.jpg')<br>
+image.show()<br>
+enh_bri=ImageEnhance.Brightness(image)<br>
+brightness=1.5<br>
+image_brightened=enh_bri.enhance(brightness)<br>
+image_brightened.show()<br>
+
+enh_col=ImageEnhance.Color(image)<br>
+color=1.5<br>
+image_colored=enh_col.enhance(color)<br>
+image_colored.show()<br>
+enh_con=ImageEnhance.Contrast(image)<br>
+contrast=1.5<br>
+image_contrasted=enh_con.enhance(contrast)<br>
+image_contrasted.show()<br>
+enh_sha=ImageEnhance.Sharpness(image)<br>
+sharpness=3.0<br>
+image_sharpened=enh_sha.enhance(sharpness)<br>
+image_sharpened.show()<br><br>
+<br>
+
+**18.#Morphological operations**
+
+import cv2<br>
+import numpy as np<br>
+from matplotlib import pyplot as plt<br>
+from PIL import Image,ImageEnhance<br>
+img= cv2.imread('plant3.jpg',0)<br>
+ax=plt.subplots(figsize=(20,10))<br>
+kernel=np.ones((5,5),np.uint8)<br>
+opening=cv2.morphologyEx(img,cv2.MORPH_OPEN,kernel)<br>
+closing=cv2.morphologyEx(img,cv2.MORPH_CLOSE,kernel)<br>
+erosion=cv2.erode(img,kernel,iterations=1)<br>
+dilation=cv2.dilate(img,kernel,iterations=1)<br>
+gradient=cv2.morphologyEx(img,cv2.MORPH_GRADIENT,kernel)<br>
+plt.subplot(151)<br>
+plt.imshow(opening)<br>
+plt.subplot(152)<br>
+plt.imshow(closing)<br>
+plt.subplot(153)<br>
+plt.imshow(erosion)<br>
+plt.subplot(154)<br>
+plt.imshow(dilation)<br>
+plt.subplot(155)<br>
+plt.imshow(gradient)<br>
+cv2.waitKey(0)<br>
+<br>
+![image](https://user-images.githubusercontent.com/97940332/176427081-34961077-a495-4169-9226-8219d2db04f0.png)
+
+
 
 
 
