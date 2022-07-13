@@ -9,6 +9,10 @@ cv2.waitKey(0)<br>
 cv2.destroyAllWindows()<br><br>
 
 ![image](https://user-images.githubusercontent.com/97940332/173813972-9a441bd0-13f9-4d8f-8c9a-c8508d154410.png)<br>
+
+
+1.![image](https://user-images.githubusercontent.com/97940332/178695742-2919be52-f807-465e-ab94-7e98767dd263.png)
+
 ***************************************************************************************************************************
 
 **2.
@@ -313,6 +317,8 @@ plt.imshow(gradient)<br>
 cv2.waitKey(0)<br>
 <br>
 ![image](https://user-images.githubusercontent.com/97940332/176427081-34961077-a495-4169-9226-8219d2db04f0.png)
+
+
 
 
 
