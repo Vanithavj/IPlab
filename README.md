@@ -318,6 +318,13 @@ cv2.waitKey(0)<br>
 <br>
 ![image](https://user-images.githubusercontent.com/97940332/176427081-34961077-a495-4169-9226-8219d2db04f0.png)
 
+**19.#Slicing with background**
+![image](https://user-images.githubusercontent.com/97940332/178705348-a4817681-347a-42ca-a503-bee81c6fcc0d.png)
+
+**20.#Slicing without background**
+![image](https://user-images.githubusercontent.com/97940332/178705615-9b017cea-417e-4a79-a110-48df17138b56.png)
+
+
 
 
 
