@@ -329,7 +329,7 @@ cv2.waitKey(0)<br>
 
 ![image](https://user-images.githubusercontent.com/97940332/178705615-9b017cea-417e-4a79-a110-48df17138b56.png)
 
-21.#Histogram
+**21.#Histogram**
 
 import numpy as np<br>
 import skimage.color<br>
@@ -356,7 +356,10 @@ plt.ylabel("pixel count")<br>
 plt.xlim([0.0, 1.0])  # <- named arguments do not work here<br>
 
 plt.plot(bin_edges[0:-1], histogram)  # <- or here<br>
-plt.show()<br>
+plt.show()<br><br><br>
+
+![image](https://user-images.githubusercontent.com/97940332/178972379-5241296f-273c-4cdf-b496-69c3a37d51d3.png)
+
 
 
 
