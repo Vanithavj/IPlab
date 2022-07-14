@@ -324,6 +324,35 @@ cv2.waitKey(0)<br>
 **20.#Slicing without background**
 ![image](https://user-images.githubusercontent.com/97940332/178705615-9b017cea-417e-4a79-a110-48df17138b56.png)
 
+21.#Histogram
+
+import numpy as np<br>
+import skimage.color<br>
+import skimage.io<br>
+import matplotlib.pyplot as plt<br>
+#%matplotlib widget<br>
+
+# read the image of a plant seedling as grayscale from the outset<br>
+image = skimage.io.imread(fname="flower1.jpg", as_gray=True)<br>
+
+# display the image<br>
+fig, ax = plt.subplots()<br>
+plt.imshow(image, cmap="gray")<br>
+plt.show()<br>
+
+# create the histogram<br>
+histogram, bin_edges = np.histogram(image, bins=256, range=(0, 1))<br>
+
+# configure and draw the histogram figure<br>
+plt.figure()<br>
+plt.title("Grayscale Histogram")<br>
+plt.xlabel("grayscale value")<br>
+plt.ylabel("pixel count")<br>
+plt.xlim([0.0, 1.0])  # <- named arguments do not work here<br>
+
+plt.plot(bin_edges[0:-1], histogram)  # <- or here<br>
+plt.show()<br>
+
 
 
 
