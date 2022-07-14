@@ -117,6 +117,7 @@ cv2.waitKey(0)<br>
 cv2.destroyAllWindows()<br>
 
 ![image](https://user-images.githubusercontent.com/97940332/174043202-3b50531e-bb8f-4c89-a203-17453be3b8f9.png)
+***********************************************************************************************************************************
 
 **9.#Resize the original image**<br>
 import cv2<br>
@@ -133,7 +134,7 @@ cv2.waitKey(0)<br>
 
 ![image](https://user-images.githubusercontent.com/97940332/174043997-093ff2a8-4ea9-4210-a47f-7dd49c755091.png)
 
-
+********************************************************************************************************************************
 
 **22/06/22**<br>
 http://localhost:8890/notebooks/vanitha%20IP%20lab/exercise226.ipynb# <br>
@@ -148,7 +149,7 @@ plt.imshow(image)<br>
 plt.show()<br><br><br>
 
 ![image](https://user-images.githubusercontent.com/97940332/175017946-6440c0f0-09e6-4ee0-8bb2-36961720b573.png)
-
+**************************************************************************************************************************************
 **11.#program to mask and blur the image**<br>
 
 ![image](https://user-images.githubusercontent.com/97940332/175018143-c290e32b-c261-461f-ac5d-b10b0767662d.png)
@@ -156,7 +157,7 @@ plt.show()<br><br><br>
 ![image](https://user-images.githubusercontent.com/97940332/175018339-c57c5735-8e0d-4c7f-a021-82792489e390.png)
 ![image](https://user-images.githubusercontent.com/97940332/175018406-4fee40ff-a379-4742-af3d-9d15c34317c9.png)
 ![image](https://user-images.githubusercontent.com/97940332/175018458-8f832137-9ef7-4da8-bdd3-6ba92a3012f2.png)
-
+***************************************************************************************************************************************
 **12.#Program to perform the arithmatic operations on image**<br>
 import cv2<br>
 import matplotlib.image as mping<br>
@@ -193,16 +194,18 @@ cv2.imwrite('output.jpg',fimg4)<br>
 ![image](https://user-images.githubusercontent.com/97940332/175279681-ff9c6930-1483-4f30-8f86-b06c2bc2fd2f.png)
 ![image](https://user-images.githubusercontent.com/97940332/175279773-48a05500-d878-490c-9a3b-ecc25f68f099.png)
 
-
+**********************************************************************************************************************************
 23/06/22<br>
 
 http://localhost:8889/notebooks/vanitha%20IP%20lab/Untitled3.ipynb?kernel_name=python3
 
-13.Develop a program to change the image to different color spaces
+13.Develop a program to change the image to different color spaces<br>
+<br><br>
 ![image](https://user-images.githubusercontent.com/97940332/175260727-36dd7cd3-01a9-4d7d-a6fc-bedc6dcc5264.png)
+***********************************************************************************************************************************
 14.![image](https://user-images.githubusercontent.com/97940332/175264286-4e861f0f-e05c-4903-b599-bc7369f0d9f4.png)
 
-
+**************************************************************************************************************************************
 29/06/22<br>
 
 **15.//Bitwise operations<br>**
