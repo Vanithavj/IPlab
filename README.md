@@ -337,7 +337,7 @@ import skimage.io<br>
 import matplotlib.pyplot as plt<br>
 #%matplotlib widget<br>
 
-#read the image of a plant seedling as grayscale from the outset<br>
+
 image = skimage.io.imread(fname="flower1.jpg", as_gray=True)<br>
 
 #display the image<br>
