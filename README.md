@@ -367,19 +367,17 @@ plt.show()<br><br><br>
 
 22.Intensity transformation<br>
 
-a.#Image sharpen<br>
-from PIL import Image<br>
-from PIL import ImageFilter<br>
-import matplotlib.pyplot as plt<br>
-#Load the image<br>
-my_image=Image.open('flower1.jpg')<br>
-#Use sharpen funcion<br>
-sharp=my_image.filter(ImageFilter.SHARPEN)<br>
-#save the image<br>
-sharp.save('D:/image_sharpen.jpg')<br>
-sharp.show()<br>
-plt.imshow(sharp)<br>
-plt.show()<br><br><br><br>
+a.
+%matplotlib inline
+import imageio
+import matplotlib.pyplot as plt
+import warnings
+import matplotlib.cbook
+warnings.filterwarnings("ignore",category=matplotlib.cbook.mplDeprecation)
+pic=imageio.imread('butterfly1.jpg')
+plt.figure(figsize=(6,6))
+plt.imshow(pic);
+plt.axis('off');
 
 ![image](https://user-images.githubusercontent.com/97940332/179967886-b10d9237-7a1b-4f40-aae2-6ea4ee79315f.png)
 
@@ -431,7 +429,63 @@ plt.figure(figsize=(5,5))<br>
 plt.imshow(gamma_correction)<br>
 plt.axis('off');<br>
 
-![image](https://user-images.githubusercontent.com/97940332/179971017-d4521187-29b6-4ed4-8fa1-fc1890fbca79.png)
+![image](https://user-images.githubusercontent.com/97940332/179971494-b30218d0-8c3c-4625-9598-cf9bd442a926.png)
+
+**23.Image manipulation**<br>
+
+a.#Image sharpen<br>
+from PIL import Image<br>
+from PIL import ImageFilter<br>
+import matplotlib.pyplot as plt<br>
+#Load the image<br>
+my_image=Image.open('flower1.jpg')<br>
+#Use sharpen funcion<br>
+sharp=my_image.filter(ImageFilter.SHARPEN)<br>
+#save the image<br>
+sharp.save('D:/image_sharpen.jpg')<br>
+sharp.show()<br>
+plt.imshow(sharp)<br>
+plt.show()<br>
+<br>
+![image](https://user-images.githubusercontent.com/97940332/179972134-8461471e-eee9-4fbb-a387-723d38df526a.png)
+
+b.#Image flip<br>
+import matplotlib.pyplot as plt<br>
+#Load the image<br>
+img=Image.open('flower1.jpg')<br>
+plt.imshow(img)<br>
+plt.show()<br>
+
+#use the flip function<br>
+flip=img.transpose(Image.FLIP_LEFT_RIGHT)<br>
+
+#save the image<br>
+flip.save('D:/image_flip.jpg')<br>
+plt.imshow(flip)<br>
+plt.show()<br><br>
+<br>
+![image](https://user-images.githubusercontent.com/97940332/179972471-c104206d-1e91-45a4-817a-700ad779d8a3.png)
+
+
+c.#Importing Image class from PIL module<br>
+from PIL import Image<br>
+import matplotlib.pyplot as plt<br>
+#Opens a image in RGB mode<br>
+im=Image.open('flower1.jpg')<br>
+
+#Size of the image in pixels(size of original image)<br>
+width,height=im.size<br>
+
+#cropped image of above dimension<br>
+im1=im.crop((30,26,180,200))<br>
+
+#Shows the image in image viewer<br>
+im1.show()<br>
+plt.imshow(im1)<br>
+plt.show()<br><br>
+<br>
+![image](https://user-images.githubusercontent.com/97940332/179972536-17064bc7-d998-40e9-a8d7-5d62b3ce147c.png)
+
 
 
 
