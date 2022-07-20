@@ -363,35 +363,76 @@ plt.show()<br><br><br>
 
 ![image](https://user-images.githubusercontent.com/97940332/178972379-5241296f-273c-4cdf-b496-69c3a37d51d3.png)
 
-20/07/2022
+20/07/2022<br>
 
-22.Intensity transformation
+22.Intensity transformation<br>
 
-a.#Image sharpen
-from PIL import Image
-from PIL import ImageFilter
-import matplotlib.pyplot as plt
-#Load the image
-my_image=Image.open('flower1.jpg')
-#Use sharpen funcion
-sharp=my_image.filter(ImageFilter.SHARPEN)
-#save the image
-sharp.save('D:/image_sharpen.jpg')
-sharp.show()
-plt.imshow(sharp)
-plt.show()
+a.#Image sharpen<br>
+from PIL import Image<br>
+from PIL import ImageFilter<br>
+import matplotlib.pyplot as plt<br>
+#Load the image<br>
+my_image=Image.open('flower1.jpg')<br>
+#Use sharpen funcion<br>
+sharp=my_image.filter(ImageFilter.SHARPEN)<br>
+#save the image<br>
+sharp.save('D:/image_sharpen.jpg')<br>
+sharp.show()<br>
+plt.imshow(sharp)<br>
+plt.show()<br><br><br><br>
 
 ![image](https://user-images.githubusercontent.com/97940332/179967886-b10d9237-7a1b-4f40-aae2-6ea4ee79315f.png)
 
-b.#negative image
-negative=255-pic #neg=(L-1)-img
-plt.figure(figsize=(6,6))
-plt.imshow(negative);
-plt.axis('off');
+b.#negative image<br>
+negative=255-pic #neg=(L-1)-img<br>
+plt.figure(figsize=(6,6))<br>
+plt.imshow(negative);<br>
+plt.axis('off');<br>
 
 ![image](https://user-images.githubusercontent.com/97940332/179968084-130b9140-731a-4a21-8878-828ee0e88396.png)
 
-c.
+c.#log transformation<br>
+%matplotlib inline<br>
+
+import imageio<br>
+import numpy as np<br>
+import matplotlib.pyplot as plt<br>
+
+pic=imageio.imread('butterfly1.jpg')<br>
+gray=lambda rgb : np.dot(rgb[...,:3],[0.299,0.587,0.114])<br>
+gray=gray(pic)<br>
+
+max_=np.max(gray)<br>
+
+def log_transform():<br>
+    return(255/np.log(1+max_))*np.log(1+gray)<br>
+plt.figure(figsize=(5,5))<br>
+plt.imshow(log_transform(),cmap=plt.get_cmap(name='gray'))<br>
+plt.axis('off');<br>
+
+![image](https://user-images.githubusercontent.com/97940332/179970815-582a9340-f86b-42c0-98ff-9046efc6622e.png)
+
+
+d.#gamma correction<br>
+import imageio<br>
+import matplotlib.pyplot as plt<br>
+img=imageio.imread('butterfly1.jpg')<br>
+plt.imshow(img)<br>
+plt.show()<br>
+
+#Gamma encoding<br>
+pic=imageio.imread('butterfly1.jpg')<br>
+
+plt.show()<br>
+gamma=2.2 #Gamma<1 ~ dark; Gamma>1 ~ bright<br>
+
+gamma_correction =((pic/255)**(1/gamma))<br>
+plt.figure(figsize=(5,5))<br>
+plt.imshow(gamma_correction)<br>
+plt.axis('off');<br>
+
+![image](https://user-images.githubusercontent.com/97940332/179971017-d4521187-29b6-4ed4-8fa1-fc1890fbca79.png)
+
 
 
 
