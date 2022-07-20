@@ -363,6 +363,36 @@ plt.show()<br><br><br>
 
 ![image](https://user-images.githubusercontent.com/97940332/178972379-5241296f-273c-4cdf-b496-69c3a37d51d3.png)
 
+20/07/2022
+
+22.Intensity transformation
+
+a.#Image sharpen
+from PIL import Image
+from PIL import ImageFilter
+import matplotlib.pyplot as plt
+#Load the image
+my_image=Image.open('flower1.jpg')
+#Use sharpen funcion
+sharp=my_image.filter(ImageFilter.SHARPEN)
+#save the image
+sharp.save('D:/image_sharpen.jpg')
+sharp.show()
+plt.imshow(sharp)
+plt.show()
+
+![image](https://user-images.githubusercontent.com/97940332/179967886-b10d9237-7a1b-4f40-aae2-6ea4ee79315f.png)
+
+b.#negative image
+negative=255-pic #neg=(L-1)-img
+plt.figure(figsize=(6,6))
+plt.imshow(negative);
+plt.axis('off');
+
+![image](https://user-images.githubusercontent.com/97940332/179968084-130b9140-731a-4a21-8878-828ee0e88396.png)
+
+c.
+
 
 
 
