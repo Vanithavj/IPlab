@@ -366,22 +366,21 @@ plt.show()<br><br><br>
 20/07/2022<br>
 
 22.Intensity transformation<br>
-
-a.
-%matplotlib inline
-import imageio
-import matplotlib.pyplot as plt
-import warnings
-import matplotlib.cbook
-warnings.filterwarnings("ignore",category=matplotlib.cbook.mplDeprecation)
-pic=imageio.imread('butterfly1.jpg')
-plt.figure(figsize=(6,6))
-plt.imshow(pic);
-plt.axis('off');
-
+<br>
+%matplotlib inline<br>
+import imageio<br>
+import matplotlib.pyplot as plt<br>
+import warnings<br>
+import matplotlib.cbook<br>
+warnings.filterwarnings("ignore",category=matplotlib.cbook.mplDeprecation)<br>
+pic=imageio.imread('butterfly1.jpg')<br>
+plt.figure(figsize=(6,6))<br>
+plt.imshow(pic);<br>
+plt.axis('off');<br>
+<br><br><br>
 ![image](https://user-images.githubusercontent.com/97940332/179967886-b10d9237-7a1b-4f40-aae2-6ea4ee79315f.png)
 
-b.#negative image<br>
+a.#negative image<br>
 negative=255-pic #neg=(L-1)-img<br>
 plt.figure(figsize=(6,6))<br>
 plt.imshow(negative);<br>
@@ -389,7 +388,7 @@ plt.axis('off');<br>
 
 ![image](https://user-images.githubusercontent.com/97940332/179968084-130b9140-731a-4a21-8878-828ee0e88396.png)
 
-c.#log transformation<br>
+b.#log transformation<br>
 %matplotlib inline<br>
 
 import imageio<br>
@@ -411,7 +410,7 @@ plt.axis('off');<br>
 ![image](https://user-images.githubusercontent.com/97940332/179970815-582a9340-f86b-42c0-98ff-9046efc6622e.png)
 
 
-d.#gamma correction<br>
+c.#gamma correction<br>
 import imageio<br>
 import matplotlib.pyplot as plt<br>
 img=imageio.imread('butterfly1.jpg')<br>
