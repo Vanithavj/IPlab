@@ -486,6 +486,18 @@ plt.show()<br><br>
 ![image](https://user-images.githubusercontent.com/97940332/179972536-17064bc7-d998-40e9-a8d7-5d62b3ce147c.png)
 
 
+27/7/22
+
+assignment:
+#max
+![image](https://user-images.githubusercontent.com/97940332/181226844-3797b9a8-de94-4923-a30f-05d5f521182b.png)
+![image](https://user-images.githubusercontent.com/97940332/181226925-28d0fb86-83f6-48d0-818c-94bd47a9b0dc.png)
+
+
+
+
+
+
 
 
 
