@@ -490,7 +490,16 @@ plt.show()<br><br>
 
 assignment:
 #max
-![image](https://user-images.githubusercontent.com/97940332/181226844-3797b9a8-de94-4923-a30f-05d5f521182b.png)
+![image](https://user-images.githubusercontent.com/97940332/181226844-3797b9a8-de94-4923-a30f-05d5f521182b.png)<br>
+from PIL import Image
+import numpy as np
+
+w, h = 512, 512
+data = np.zeros((h, w, 3), dtype=np.uint8)
+data[0:256, 0:256] = [255, 0, 255] # red patch in upper left
+img = Image.fromarray(data, 'RGB')
+img.save('my.png')
+img.show()
 
 #min and avg
 ![image](https://user-images.githubusercontent.com/97940332/181226925-28d0fb86-83f6-48d0-818c-94bd47a9b0dc.png)
