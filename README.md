@@ -501,8 +501,16 @@ img = Image.fromarray(data, 'RGB')
 img.save('my.png')
 img.show()
 
+import cv2
+import numpy as np
+img=cv2.imread('my.png')
+cv2.imshow('my',img)
+cv2.waitKey(0)
+np.max(img)
+
 #min and avg
-![image](https://user-images.githubusercontent.com/97940332/181226925-28d0fb86-83f6-48d0-818c-94bd47a9b0dc.png)
+![image](https://user-images.githubusercontent.com/97940332/181226925-28d0fb86-83f6-48d0-818c-94bd47a9b0dc.png)<br>
+
 
 #matrix2image
 ![image](https://user-images.githubusercontent.com/97940332/181236482-82fc4ff4-1ca9-46f9-8e5f-f17f57ee8417.png)
