@@ -491,7 +491,12 @@ plt.show()<br><br>
 assignment:
 #max
 ![image](https://user-images.githubusercontent.com/97940332/181226844-3797b9a8-de94-4923-a30f-05d5f521182b.png)
+
+#min and avg
 ![image](https://user-images.githubusercontent.com/97940332/181226925-28d0fb86-83f6-48d0-818c-94bd47a9b0dc.png)
+
+#matrix2image
+![image](https://user-images.githubusercontent.com/97940332/181236482-82fc4ff4-1ca9-46f9-8e5f-f17f57ee8417.png)
 
 
 
