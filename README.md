@@ -486,30 +486,36 @@ plt.show()<br><br>
 ![image](https://user-images.githubusercontent.com/97940332/179972536-17064bc7-d998-40e9-a8d7-5d62b3ce147c.png)
 
 
-27/7/22
+27/7/22<br>
 
-assignment:
-#max
+assignment:<br>
+#max<br>
 ![image](https://user-images.githubusercontent.com/97940332/181226844-3797b9a8-de94-4923-a30f-05d5f521182b.png)<br>
-from PIL import Image
-import numpy as np
+from PIL import Image<br>
+import numpy as np<br>
 
-w, h = 512, 512
-data = np.zeros((h, w, 3), dtype=np.uint8)
-data[0:256, 0:256] = [255, 0, 255] # red patch in upper left
-img = Image.fromarray(data, 'RGB')
-img.save('my.png')
-img.show()
+w, h = 512, 512<br>
+data = np.zeros((h, w, 3), dtype=np.uint8)<br>
+data[0:256, 0:256] = [255, 0, 255] # red patch in upper left<br>
+img = Image.fromarray(data, 'RGB')<br>
+img.save('my.png')<br>
+img.show()<br>
 
-import cv2
-import numpy as np
-img=cv2.imread('my.png')
-cv2.imshow('my',img)
-cv2.waitKey(0)
-np.max(img)
+import cv2<br>
+import numpy as np<br>
+img=cv2.imread('my.png')<br>
+cv2.imshow('my',img)<br>
+cv2.waitKey(0)<br>
+np.max(img)<br>
 
-#min and avg
+#min and avg<br>
 ![image](https://user-images.githubusercontent.com/97940332/181226925-28d0fb86-83f6-48d0-818c-94bd47a9b0dc.png)<br>
+import cv2<br>
+import numpy as np<br>
+img=cv2.imread('my.png')<br>
+cv2.imshow('my',img)<br>
+cv2.waitKey(0)<br>
+np.min(img)<br>
 
 
 #matrix2image
