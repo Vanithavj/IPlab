@@ -515,10 +515,18 @@ import numpy as np<br>
 img=cv2.imread('my.png')<br>
 cv2.imshow('my',img)<br>
 cv2.waitKey(0)<br>
-np.min(img)<br>
+np.min(img)<br><br>
+#standard deviation<br><br>
 
+import cv2<br>
+import numpy as np<br>
+img=cv2.imread('my.png')
+cv2.imshow('my',img)<br>
+cv2.waitKey(0)
+np.std(img)<br>
+<br>
 
-#matrix2image
+#matrix2image<br><br><br><br>
 ![image](https://user-images.githubusercontent.com/97940332/181236482-82fc4ff4-1ca9-46f9-8e5f-f17f57ee8417.png)
 
 
