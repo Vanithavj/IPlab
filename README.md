@@ -527,31 +527,71 @@ np.std(img)<br>
 <br>
 
 #matrix2image<br><br><br><br>
-from PIL import Image
-import numpy as np
-w, h = 1000, 1000
-data = np.zeros((h, w, 3), dtype=np.uint8)
-data[0:256, 0:256] = [204, 0, 0]
-data[257:512,0:256] = [0, 255, 0]
-data[513:780, 0:256] = [0, 0, 255]
-data[781:1000, 0:256] = [0, 125, 255]
-data[0:256, 257:512] = [255, 212, 0]
-data[0:256, 513:780] = [0, 212, 56]
-data[0:256, 781:1000] = [245, 0, 56]
-data[257:512,257:512] = [24, 5, 255]
-data[257:512,513:780] = [240, 52, 255]
-data[257:512,781:1000] = [40, 252, 255]
-data[513:780,257:512] = [140, 52, 255]
-data[781:1000,257:512] = [240, 152, 255]
-data[781:1000,513:780] = [40, 152, 255]
-data[781:1000,780:1000] = [240, 152, 255]
-data[513:780,513:780] = [200, 52, 55]
-data[513:780,781:1000] = [0, 252, 155]
-img = Image.fromarray(data, 'RGB')
-img.save('my.jpg')
-img.show()
+from PIL import Image<br>
+import numpy as np<br>
+w, h = 1000, 1000<br>
+data = np.zeros((h, w, 3), dtype=np.uint8)<br>
+data[0:256, 0:256] = [204, 0, 0]<br>
+data[257:512,0:256] = [0, 255, 0]<br>
+data[513:780, 0:256] = [0, 0, 255]<br>
+data[781:1000, 0:256] = [0, 125, 255]<br>
+data[0:256, 257:512] = [255, 212, 0]<br>
+data[0:256, 513:780] = [0, 212, 56]<br>
+data[0:256, 781:1000] = [245, 0, 56]<br>
+data[257:512,257:512] = [24, 5, 255]<br>
+data[257:512,513:780] = [240, 52, 255]<br>
+data[257:512,781:1000] = [40, 252, 255]<br>
+data[513:780,257:512] = [140, 52, 255]<br>
+data[781:1000,257:512] = [240, 152, 255]<br>
+data[781:1000,513:780] = [40, 152, 255]<br>
+data[781:1000,780:1000] = [240, 152, 255]<br>
+data[513:780,513:780] = [200, 52, 55]<br>
+data[513:780,781:1000] = [0, 252, 155]<br>
+img = Image.fromarray(data, 'RGB')<br>
+img.save('my.jpg')<br>
+img.show()<br>
 
 
+#assignment<br>
+# Python3 program for printing<br>
+# the rectangular pattern<br>
+ 
+# Function to print the pattern<br>
+def printPattern(n):<br>
+ <br>
+    arraySize = n * 2 - 1;<br>
+    result = [[0 for x in range(arraySize)]<br>
+                 for y in range(arraySize)];<br>
+         
+    # Fill the values<br>
+    for i in range(arraySize):<br>
+        for j in range(arraySize):
+            if(abs(i - (arraySize // 2)) ><br>
+               abs(j - (arraySize // 2))):<br>
+                result[i][j] = abs(i - (arraySize // 2));<br>
+            else:<br>
+                result[i][j] = abs(j - (arraySize // 2));<br>
+             
+    # Print the array<br>
+    for i in range(arraySize):<br>
+        for j in range(arraySize):<br>
+            print(result[i][j], end = " ");<br>
+        print("");<br>
+ 
+# Driver Code<br>
+n = 4;<br>
+ 
+printPattern(n);<br>
+<br>
+<br><br><br>
+3 3 3 3 3 3 3 <br>
+3 2 2 2 2 2 3  <br>
+3 2 1 1 1 2 3  <br>
+3 2 1 0 1 2 3  <br>
+3 2 1 1 1 2 3  <br>
+3 2 2 2 2 2 3  <br>
+3 3 3 3 3 3 3  <br>
+ <br> <br>
 
 
 
