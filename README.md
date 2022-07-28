@@ -592,6 +592,26 @@ printPattern(n);<br>
 3 2 2 2 2 2 3  <br>
 3 3 3 3 3 3 3  <br>
  <br> <br>
+ 
+ #max,min,avg,standard deviation<br>
+ import numpy as np<br>
+import matplotlib.pyplot as plt<br>
+
+
+<br>array_colors = np.array([[[245, 20, 36], <br>
+                         [10, 215, 30],<br>
+                         [40, 50, 205]],<br>
+                         [[70, 50, 10], <br>
+                    [25, 230, 85],<br>
+                    [12, 128, 128]],<br>
+                    [[25, 212, 3], <br>
+                    [55, 5, 250],<br>
+                    [240, 152, 25]],<br>
+                    ])<br>
+plt.imshow(array_colors)<br>
+
+np.max(array_colors)<br>
+
 
 
 
