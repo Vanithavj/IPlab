@@ -563,7 +563,7 @@ def printPattern(n):<br>
     result = [[0 for x in range(arraySize)]<br>
                  for y in range(arraySize)];<br>
          
-    # Fill the values<br>
+   #Fill the values<br>
     for i in range(arraySize):<br>
         for j in range(arraySize):
             if(abs(i - (arraySize // 2)) ><br>
@@ -572,8 +572,8 @@ def printPattern(n):<br>
             else:<br>
                 result[i][j] = abs(j - (arraySize // 2));<br>
              
-    # Print the array<br>
-    for i in range(arraySize):<br>
+   # Print the array<br>
+   for i in range(arraySize):<br>
         for j in range(arraySize):<br>
             print(result[i][j], end = " ");<br>
         print("");<br>
