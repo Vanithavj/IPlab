@@ -234,7 +234,7 @@ cv2.waitKey(0)<br><br><br>
 
 ![image](https://user-images.githubusercontent.com/97940332/176411024-7f291241-c1ba-4585-854d-98d3af6247d5.png)
 
-
+*********************************************************************************************************************************************************************
 **16.Blurring**
 
 #importing libraries<br><br>
@@ -262,7 +262,7 @@ cv2.destroyAllWindows()<br>
 ![image](https://user-images.githubusercontent.com/97940332/176425678-f3ad05f6-9f00-48dd-8020-254e41582510.png)
 ![image](https://user-images.githubusercontent.com/97940332/176425752-7752ecdf-1906-4a81-832a-7e754fc43c7d.png)
 
-
+***********************************************************************************************************************************************************************
 **17.#Image Enhancement**<br><br>
 from PIL import Image<br>
 from PIL import ImageEnhance<br>
@@ -292,7 +292,7 @@ image_sharpened.show()<br><br>
 ![image](https://user-images.githubusercontent.com/97940332/176427668-e9b41f18-ca57-4e88-82ea-747be04ce28b.png)
 ![image](https://user-images.githubusercontent.com/97940332/176427725-1addd5dd-b136-4db6-a84d-fd944dbbd708.png)
 
-
+***************************************************************************************************************************************************************
 **18.#Morphological operations**
 
 import cv2<br>
@@ -321,16 +321,19 @@ cv2.waitKey(0)<br>
 <br>
 
 ![image](https://user-images.githubusercontent.com/97940332/176427081-34961077-a495-4169-9226-8219d2db04f0.png)
+********************************************************************************************************************************************************************
 
 **19.#Slicing with background**
 
 
-![image](https://user-images.githubusercontent.com/97940332/178705348-a4817681-347a-42ca-a503-bee81c6fcc0d.png)
+![image](https://user-images.githubusercontent.com/97940332/178705348-a4817681-347a-42ca-a503-bee81c6fcc0d.png)<br>
+**********************************************************************************************************************************************************************
 
 **20.#Slicing without background**
 
 
-![image](https://user-images.githubusercontent.com/97940332/178705615-9b017cea-417e-4a79-a110-48df17138b56.png)
+![image](https://user-images.githubusercontent.com/97940332/178705615-9b017cea-417e-4a79-a110-48df17138b56.png)<br>
+***********************************************************************************************************************************************************************
 
 **21.#Histogram**
 
@@ -361,7 +364,8 @@ plt.xlim([0.0, 1.0])  # <- named arguments do not work here<br>
 plt.plot(bin_edges[0:-1], histogram)  # <- or here<br>
 plt.show()<br><br><br>
 
-![image](https://user-images.githubusercontent.com/97940332/178972379-5241296f-273c-4cdf-b496-69c3a37d51d3.png)
+![image](https://user-images.githubusercontent.com/97940332/178972379-5241296f-273c-4cdf-b496-69c3a37d51d3.png)<br>
+********************************************************************************************************************************************************************
 
 20/07/2022<br>
 
@@ -379,7 +383,7 @@ plt.imshow(pic);<br>
 plt.axis('off');<br>
 <br><br><br>
 ![image](https://user-images.githubusercontent.com/97940332/179967886-b10d9237-7a1b-4f40-aae2-6ea4ee79315f.png)
-
+<br>+++++++++++++++++++++++++++++<br>
 a.#negative image<br>
 negative=255-pic #neg=(L-1)-img<br>
 plt.figure(figsize=(6,6))<br>
@@ -387,7 +391,7 @@ plt.imshow(negative);<br>
 plt.axis('off');<br>
 
 ![image](https://user-images.githubusercontent.com/97940332/179968084-130b9140-731a-4a21-8878-828ee0e88396.png)
-
+<br>+++++++++++++++++++++++++++++++<br>
 b.#log transformation<br>
 %matplotlib inline<br>
 
@@ -409,7 +413,7 @@ plt.axis('off');<br>
 
 ![image](https://user-images.githubusercontent.com/97940332/179970815-582a9340-f86b-42c0-98ff-9046efc6622e.png)
 
-
+<br>++++++++++++++++++++++++++++++++<br>
 c.#gamma correction<br>
 import imageio<br>
 import matplotlib.pyplot as plt<br>
@@ -430,6 +434,7 @@ plt.axis('off');<br>
 
 ![image](https://user-images.githubusercontent.com/97940332/179971494-b30218d0-8c3c-4625-9598-cf9bd442a926.png)
 
+*********************************************************************************************************************************************************************
 **23.Image manipulation**<br>
 
 a.#Image sharpen<br>
@@ -447,6 +452,7 @@ plt.imshow(sharp)<br>
 plt.show()<br>
 <br>
 ![image](https://user-images.githubusercontent.com/97940332/179972134-8461471e-eee9-4fbb-a387-723d38df526a.png)
+<br>++++++++++++++++++++++++++++++++++++++++++++++++++++<br>
 
 b.#Image flip<br>
 import matplotlib.pyplot as plt<br>
@@ -465,7 +471,7 @@ plt.show()<br><br>
 <br>
 ![image](https://user-images.githubusercontent.com/97940332/179972471-c104206d-1e91-45a4-817a-700ad779d8a3.png)
 
-
+<br>+++++++++++++++++++++++++++++++++++++++++++++++++++++++++<br>
 c.#Importing Image class from PIL module<br>
 from PIL import Image<br>
 import matplotlib.pyplot as plt<br>
@@ -485,7 +491,7 @@ plt.show()<br><br>
 <br>
 ![image](https://user-images.githubusercontent.com/97940332/179972536-17064bc7-d998-40e9-a8d7-5d62b3ce147c.png)
 
-
+********************************************************************************************************************************************************************
 27/7/22<br>
 
 assignment:<br>
@@ -507,7 +513,7 @@ img=cv2.imread('my.png')<br>
 cv2.imshow('my',img)<br>
 cv2.waitKey(0)<br>
 np.max(img)<br>
-
+************************************************************************************************************************************************************
 #min and avg<br>
 ![image](https://user-images.githubusercontent.com/97940332/181226925-28d0fb86-83f6-48d0-818c-94bd47a9b0dc.png)<br>
 import cv2<br>
@@ -516,6 +522,7 @@ img=cv2.imread('my.png')<br>
 cv2.imshow('my',img)<br>
 cv2.waitKey(0)<br>
 np.min(img)<br><br>
+***************************************************************************************************************************************************************
 #standard deviation<br><br>
 
 import cv2<br>
@@ -525,7 +532,7 @@ cv2.imshow('my',img)<br>
 cv2.waitKey(0)
 np.std(img)<br>
 <br>
-
+********************************************************************************************************************************************************************
 #matrix2image<br><br><br><br>
 from PIL import Image<br>
 import numpy as np<br>
@@ -551,7 +558,7 @@ img = Image.fromarray(data, 'RGB')<br>
 img.save('my.jpg')<br>
 img.show()<br>
 
-
+********************************************************************************************************************************************************************
 #assignment<br>
 #Python3 program for printing<br>
 #the rectangular pattern<br>
@@ -592,7 +599,7 @@ printPattern(n);<br>
 3 2 2 2 2 2 3  <br>
 3 3 3 3 3 3 3  <br>
  <br> <br>
- 
+*********************************************************************************************************************************************************************** 
  #max,min,avg,standard deviation<br>
  import numpy as np<br>
 import matplotlib.pyplot as plt<br>
@@ -612,7 +619,7 @@ plt.imshow(array_colors)<br>
 
 np.max(array_colors)<br>
 
-
+*******************************************************************************************************************************************************************
 
 
 
