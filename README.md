@@ -632,7 +632,7 @@ import matplotlib.pyplot as plt<br>
 from skimage import data,filters<br>
 
 image = data.coins()<br>
-# ... or any other NumPy array!<br>
+#... or any other NumPy array!<br>
 edges = filters.sobel(image)<br>
 plt.imshow(image,cmap='gray')<br>
 plt.show()<br>
