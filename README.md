@@ -624,6 +624,120 @@ np.max(array_colors)<br>
 ![image](https://user-images.githubusercontent.com/97940332/181451944-8cb8783b-2cfd-4d6c-b397-c083669de29b.png)
 ********************************************************************************************************************************************************************
 
+**24/8/2022**<br>
+
+**#Image Filtering**<br>
+
+import matplotlib.pyplot as plt<br>
+from skimage import data,filters<br>
+
+image = data.coins()<br>
+# ... or any other NumPy array!<br>
+edges = filters.sobel(image)<br>
+plt.imshow(image,cmap='gray')<br>
+plt.show()<br>
+plt.imshow(edges, cmap='gray')<br>
+plt.show()<br><br>
+![image](https://user-images.githubusercontent.com/97940332/186403212-34b37680-4232-4c7f-a4ae-0e0cc6a12397.png)
+**********************************************************************************************************************************************************************
+
+**#Mask an image**<br>
+
+import numpy as np<br>
+from skimage import data<br>
+import matplotlib.pyplot as plt<br>
+%matplotlib inline<br>
+
+ 
+image = data.camera()<br>
+type(image)<br>
+plt.imshow(image)<br>
+plt.show()<br>
+plt.imshow(image,cmap='gray')<br>
+plt.show()<br>
+
+np.ndarray #Image is a numpy array<br>
+mask = image < 87<br>
+image[mask]=255<br>
+plt.imshow(image, cmap='gray')<br>
+plt.show()<br><br>
+![image](https://user-images.githubusercontent.com/97940332/186403630-9a94274b-a850-456d-8303-6b9f1800cc21.png)
+![image](https://user-images.githubusercontent.com/97940332/186403676-2bc0aeb0-a53d-4bfe-a4c3-27b98f5fc616.png)
+
+******************************************************************************************************************************************************************
+**#Blurring using  a gaussian Filter**<br>
+
+from scipy import misc,ndimage<br>
+ 
+<br>
+face = misc.face()<br>
+blurred_face = ndimage.gaussian_filter(face, sigma=3)<br>
+very_blurred = ndimage.gaussian_filter(face, sigma=5)<br>
+
+
+#Results<br>
+plt.imshow(face)<br>
+plt.show()<br>
+plt.imshow(blurred_face)<br>
+plt.show()<br>
+plt.imshow(very_blurred)<br>
+plt.show()<br><br>
+![image](https://user-images.githubusercontent.com/97940332/186404101-b577eeec-6158-4658-ba85-a621c4339116.png)<br>
+![image](https://user-images.githubusercontent.com/97940332/186404161-17cc497b-fc8b-4c35-b521-aeb7dbc311cf.png)<br>
+********************************************************************************************************************************************************************
+**Enhance an Image Using ImageFilter**<br>
+
+from PIL import Image, ImageFilter<br>
+#Read image<br>
+im = Image.open( 'plant1.jpg' )<br>
+#Display image<br>
+im.show()<br>
+#plt.imshow(im)<br>
+#plt.show()<br>
+ 
+from PIL import ImageEnhance<br>
+enh = ImageEnhance.Contrast(im)<br>
+enh.enhance(1.8).show("30% more contrast")<br><br>
+
+![image](https://user-images.githubusercontent.com/97940332/186404575-57e288ac-33ce-4054-a8f2-2b49b4f3862e.png)
+![image](https://user-images.githubusercontent.com/97940332/186404849-d8196c9d-55c4-43ab-879d-ee66824c5791.png)<br><br>
+
+********************************************************************************************************************************************************************
+**Edge Detection**<br>
+
+import cv2<br>
+
+ # Read the original image<br>
+img = cv2.imread('flower1.jpg')<br>
+# Display original image<br>
+cv2.imshow('Original', img)<br>
+cv2.waitKey(0)<br>
+# Convert to graycsale<br>
+img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)<br>
+# Blur the image for better edge detection<br>
+img_blur = cv2.GaussianBlur(img_gray, (3,3), 0)<br>
+# Sobel Edge Detection<br>
+sobelx = cv2.Sobel(src=img_blur, ddepth=cv2.CV_64F, dx=1, dy=0, ksize=5) # Sobel Edge Detection on the X axis<br>
+sobely = cv2.Sobel(src=img_blur, ddepth=cv2.CV_64F, dx=0, dy=1, ksize=5) # Sobel Edge Detection on the Y axis<br>
+sobelxy = cv2.Sobel(src=img_blur, ddepth=cv2.CV_64F, dx=1, dy=1, ksize=5) # Combined X and Y Sobel Edge Detection<br>
+# Display Sobel Edge Detection Images<br>
+cv2.imshow('Sobel X', sobelx)<br>
+cv2.waitKey(0)<br>
+cv2.imshow('Sobel Y', sobely)<br>
+cv2.waitKey(0)<br>
+cv2.imshow('Sobel X Y using Sobel() function', sobelxy)<br>
+cv2.waitKey(0)<br>
+# Canny Edge Detection<br>
+edges = cv2.Canny(image=img_blur, threshold1=100, threshold2=200) # Canny Edge Detection<br>
+# Display Canny Edge Detection Image<br>
+cv2.imshow('Canny Edge Detection', edges)<br>
+cv2.waitKey(0)<br>
+cv2.destroyAllWindows()<br><br>
+![image](https://user-images.githubusercontent.com/97940332/186405525-02c81be6-0a6d-45fc-b80d-edc9dc9b258d.png)
+![image](https://user-images.githubusercontent.com/97940332/186405576-ec24cc00-4ffc-4a4e-babc-13333976c890.png)
+![image](https://user-images.githubusercontent.com/97940332/186405621-0bb5a725-ec35-4a37-a68d-0f672eb5df64.png)
+![image](https://user-images.githubusercontent.com/97940332/186405686-d35e41d8-246b-4723-99dc-0abadd8725c9.png)
+![image](https://user-images.githubusercontent.com/97940332/186405755-2754d671-98ee-4fd9-97d6-7538cb5b65b8.png)
 
 
 
