@@ -766,7 +766,7 @@ dst=cv2.inpaint(img, mask,3,cv2.INPAINT_TELEA)<br>
 #write the output<br>
 cv2.imwrite('dimage_inpainted.png',dst)<br>
 plt.imshow(dst)<br>
-plt.show()</br><br>
+plt.show()<br>
 ![image](https://user-images.githubusercontent.com/97940332/187893770-14fd5a59-6c60-4757-9dd1-58dfdf53b3ee.png)
 ![image](https://user-images.githubusercontent.com/97940332/187893829-4bb27c4a-2547-49cc-9e10-97c17762c9ed.png)
 ----------------------------------------------------------------------------------------------------------------------
