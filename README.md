@@ -707,29 +707,29 @@ enh.enhance(1.8).show("30% more contrast")<br><br>
 
 import cv2<br>
 
- # Read the original image<br>
+ #Read the original image<br>
 img = cv2.imread('flower1.jpg')<br>
-# Display original image<br>
+#Display original image<br>
 cv2.imshow('Original', img)<br>
 cv2.waitKey(0)<br>
-# Convert to graycsale<br>
+#Convert to graycsale<br>
 img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)<br>
-# Blur the image for better edge detection<br>
+#Blur the image for better edge detection<br>
 img_blur = cv2.GaussianBlur(img_gray, (3,3), 0)<br>
-# Sobel Edge Detection<br>
+#Sobel Edge Detection<br>
 sobelx = cv2.Sobel(src=img_blur, ddepth=cv2.CV_64F, dx=1, dy=0, ksize=5) # Sobel Edge Detection on the X axis<br>
 sobely = cv2.Sobel(src=img_blur, ddepth=cv2.CV_64F, dx=0, dy=1, ksize=5) # Sobel Edge Detection on the Y axis<br>
 sobelxy = cv2.Sobel(src=img_blur, ddepth=cv2.CV_64F, dx=1, dy=1, ksize=5) # Combined X and Y Sobel Edge Detection<br>
-# Display Sobel Edge Detection Images<br>
+#Display Sobel Edge Detection Images<br>
 cv2.imshow('Sobel X', sobelx)<br>
 cv2.waitKey(0)<br>
 cv2.imshow('Sobel Y', sobely)<br>
 cv2.waitKey(0)<br>
 cv2.imshow('Sobel X Y using Sobel() function', sobelxy)<br>
 cv2.waitKey(0)<br>
-# Canny Edge Detection<br>
+#Canny Edge Detection<br>
 edges = cv2.Canny(image=img_blur, threshold1=100, threshold2=200) # Canny Edge Detection<br>
-# Display Canny Edge Detection Image<br>
+#Display Canny Edge Detection Image<br>
 cv2.imshow('Canny Edge Detection', edges)<br>
 cv2.waitKey(0)<br>
 cv2.destroyAllWindows()<br><br>
@@ -739,8 +739,37 @@ cv2.destroyAllWindows()<br><br>
 ![image](https://user-images.githubusercontent.com/97940332/186405686-d35e41d8-246b-4723-99dc-0abadd8725c9.png)
 ![image](https://user-images.githubusercontent.com/97940332/186405755-2754d671-98ee-4fd9-97d6-7538cb5b65b8.png)
 
+*****************************************************************************************************************************************************************
+**25-8-2022**<br>
+**1.Image Restoration**<br>
+
+#a.Restore a damaged image<br>
 
 
+import numpy as np<br>
+import cv2<br>
+import matplotlib.pyplot as plt<br>
+
+#open the image<br>
+img=cv2.imread('dimage_damaged.png')<br>
+plt.imshow(img)<br>
+plt.show()<br>
+
+#load the mask<br>
+mask=cv2.imread('dimage_mask.png',0)<br>
+plt.imshow(mask)<br>
+plt.show()<br>
+
+#Inpaint<br>
+dst=cv2.inpaint(img, mask,3,cv2.INPAINT_TELEA)<br>
+
+#write the output<br>
+cv2.imwrite('dimage_inpainted.png',dst)<br>
+plt.imshow(dst)<br>
+plt.show()</br><br>
+![image](https://user-images.githubusercontent.com/97940332/187893770-14fd5a59-6c60-4757-9dd1-58dfdf53b3ee.png)
+![image](https://user-images.githubusercontent.com/97940332/187893829-4bb27c4a-2547-49cc-9e10-97c17762c9ed.png)
+----------------------------------------------------------------------------------------------------------------------
 
 
 
