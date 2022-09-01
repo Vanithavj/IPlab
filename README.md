@@ -952,12 +952,95 @@ print('Dice's dots number: {}.'.format(len(dots_contours)))<br><br>
 
 
 ![image](https://user-images.githubusercontent.com/97940332/187897973-597fbf3b-9f0a-4453-8358-018feef44243.png)
+*******************************************************************************************************************************************************************
+#PILLOW FUNCTION<br>
+
+from PIL import Image, ImageChops,ImageFilter<br>
+from matplotlib import pyplot as plt<br>
+
+#Create a PIL Image objects<br>
+x=Image.open("x.png")<br>
+o=Image.open("o.png")<br>
+
+#Find out attributes of Image Objects<br>
+print('size of the image: ',x.size,' colour mode:',x.mode)<br>
+print('size of the image: ',o.size,' colour mode:',o.mode)<br>
+
+#Plot 2 images one besides the other<br>
+plt.subplot(121),plt.imshow(x)<br>
+plt.axis('off')<br>
+plt.subplot(122),plt.imshow(o)<br>
+plt.axis('off')<br>
+
+#multiply images<br>
+merged=ImageChops.multiply(x,o)<br>
+
+#adding 2 images<br>
+add=ImageChops.add(x,o)<br>
+
+#convert colour mode<br>
+grayscale=merged.convert('L')<br>
+grayscale<br>
+<br>
+![image](https://user-images.githubusercontent.com/97940332/187899238-610165b6-c317-4a37-aac0-a1de85c30d7e.png)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#More attributes<br>
+image=merged<br>
+<br>
+print('image size: ' , image.size,<br>
+     '\n colour mode: ', image.mode,<br>
+     '\n image width: ' , image.width, '|also represented by: ' , image.size[0],<br>
+     '\n image height: ' , image.height,'|also represented by: ', image.size[1],)<br>
+![image](https://user-images.githubusercontent.com/97940332/187899461-79c6d7a8-fda2-4be8-b5f8-fb8958ad8776.png)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#mapping the pixels of the image so we can use them as coordinates<br>
+pixel=grayscale.load()<br>
+
+#a nested lop to parse through all the pixels in the image<br>
+for row in range(grayscale.size[0]):<br>
+    for column in range (grayscale.size[1]):<br>
+        if pixel[row,column]!= (255):<br>
+            pixel[row,column]=(0)<br>
+            
+grayscale<br>
+<br>
+![image](https://user-images.githubusercontent.com/97940332/187899852-394cc661-ce5c-4023-9382-edf5fcbd837b.png)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+#1.invert image<br>
+invert=ImageChops.invert(grayscale)<br>
+
+#2.invert by subtraction<br>
+bg=Image.new('L',(256,256), color=(255))<br>
+subt=ImageChops.subtract(bg,grayscale)<br>
+
+#3.rotate<br>
+rotate=subt.rotate(45)<br>
+rotate<br>
+
+![image](https://user-images.githubusercontent.com/97940332/187900087-773e7e0b-6940-4c48-8f32-9a5c3d0f1075.png)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#gaussian blur<br>
+blur=grayscale.filter(ImageFilter.GaussianBlur(radius=1))<br>
+
+#edge detection<br>
+edge=blur.filter(ImageFilter.FIND_EDGES)<br>
+edge<br>
+![image](https://user-images.githubusercontent.com/97940332/187900216-ec57f168-722e-416b-95bc-b532dab53c7c.png)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+#change edge colours<br>
+edge=edge.convert('RGB')<br>
+bg_red=Image.new('RGB',(256,256),color=(255,0,255))<br>
 
+filled_edge=ImageChops.darker(bg_red,edge)<br>
+filled_edge<br>
 
-
-
+![image](https://user-images.githubusercontent.com/97940332/187900800-393f6963-234a-4c72-b5d8-7b1a547746dc.png)
+*******************************************************************************************************************************************************************
 
 
 
