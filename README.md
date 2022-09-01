@@ -769,7 +769,121 @@ plt.imshow(dst)<br>
 plt.show()<br>
 ![image](https://user-images.githubusercontent.com/97940332/187893770-14fd5a59-6c60-4757-9dd1-58dfdf53b3ee.png)
 ![image](https://user-images.githubusercontent.com/97940332/187893829-4bb27c4a-2547-49cc-9e10-97c17762c9ed.png)
-----------------------------------------------------------------------------------------------------------------------
+****************************************************************************************************************************************************
+
+#b.removing logo's<br>
+<br>
+import numpy as np<br>
+import matplotlib.pyplot as plt<br>
+import pandas as pd<br>
+plt.rcParams['figure.figsize']=(10,8)
+
+
+--------------------------------------------------------------------------------------------------------------------------
+def show_image(image,title='Image',cmap_type='gray'):
+    plt.imshow(image,cmap=cmap_type)
+    plt.title(title)
+    plt.axis('off')
+    
+--------------------------------------------------------------------------------------------------------------------------
+def plot_comparison(img_original, img_filtered, img_title_filtered):
+    fig,(ax1,ax2)=plt.subplots(ncols=2,figsize=(10,8),sharex=True,sharey=True)
+    ax1.imshow(img_original,cmap=plt.cm.gray)
+    ax1.set_title('Original')
+    ax1.axis('off')
+    ax2.imshow(img_filtered,cmap=plt.cm.gray)
+    ax2.set_title(img_title_filtered)
+    ax2.axis('off')
+    
+
+----------------------------------------------------------------------------------------------------------------------------------
+    
+from skimage.restoration import inpaint
+from skimage.transform import resize
+from skimage import color
+
+----------------------------------------------------------------------------------------------------------------------------------------
+image_with_logo=plt.imread('imlogo.png')
+
+#initialize the mask
+mask=np.zeros(image_with_logo.shape[:-1])
+
+#set the pixels where the logo is to 1
+mask[210:272,360:425]=1
+
+#apply inpainting to remove the logo
+image_logo_removed=inpaint.inpaint_biharmonic(image_with_logo,
+                                              mask,
+                                             multichannel=True)
+#show the original and logo removed images
+plot_comparison(image_with_logo, image_logo_removed, 'Image with logo removed')
+
+![image](https://user-images.githubusercontent.com/97940332/187895262-71da9cfa-fc61-451a-90ad-ef818fba9d7c.png)
+***********************************************************************************************************************************************************
+(2) Noise:
+
+#a.Adding noise
+
+from skimage.util import random_noise
+
+fruit_image=plt.imread('fruitts.jpeg')
+
+#Add noise to the image
+noisy_image=random_noise(fruit_image)
+
+#Show the original and resulting image
+plot_comparison(fruit_image, noisy_image, 'Noisy image')
+
+
+![image](https://user-images.githubusercontent.com/97940332/187895549-c3c6b506-2272-4547-90a5-450bf0484349.png)
+***********************************************************************************************************************************************************
+#b.reducing noise
+#import matplotlib.pyplot as plt
+from skimage.restoration import denoise_tv_chambolle
+
+noisy_image=plt.imread('noisy.jpg')
+
+#Apply total variation filter denoising
+denoised_image=denoise_tv_chambolle(noisy_image,multichannel=True)
+
+#Show original and resulting images
+plot_comparison(noisy_image,denoised_image,'Denoised Image')
+![image](https://user-images.githubusercontent.com/97940332/187895851-c0d2dfc3-5c71-4186-ae57-ccb04ba35e47.png)
+***************************************************************************************************************************************************************
+#c.Redusing noise while preserving edges
+
+from skimage.restoration import denoise_bilateral
+
+landscape_image=plt.imread('noisy.jpg')
+
+#Apply bilateral filter denoising
+denoised_image= denoise_bilateral(landscape_image,multichannel=True)
+
+#Show original and resulting images
+plot_comparison(landscape_image, denoised_image,'Denoised Image')
+
+![image](https://user-images.githubusercontent.com/97940332/187896021-a4d736a5-d3de-4c1f-8107-dafb4e21e313.png)
+******************************************************************************************************************************************************************
+#3.Segmentation
+#a.Superpixel segmentation
+
+from skimage.segmentation import slic
+from skimage.color import label2rgb
+
+face_image=plt.imread('face.jpg')
+
+#Obtain the segmentation with 400 regions
+segments= slic(face_image, n_segments=400)
+
+#Put segments on top of original image to compare
+segmented_image=label2rgb(segments,face_image,kind='avg')
+
+#Show the segmented image
+plot_comparison(face_image,segmented_image,'Segmented image,400 superpixels')
+
+![image](https://user-images.githubusercontent.com/97940332/187896138-308f2a5e-0007-495e-90fa-5009d1843979.png)
+*****************************************************************************************************************************************************************
+
 
 
 
